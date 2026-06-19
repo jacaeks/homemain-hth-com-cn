@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jacaeks.github.io/homemain-hth-com-cn/sitemap.xml

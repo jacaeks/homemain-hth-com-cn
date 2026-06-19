@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一段叙述 · 华体会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f2f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2b;
+            padding: 2rem 1.5rem;
+        }
+
+        .page-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* 开场白 – 轻叙事卡片 */
+        .opening {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.8rem 2.2rem 2.2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e6e4e1;
+            margin-bottom: 2.2rem;
+        }
+
+        .opening .sentence {
+            font-size: 1.7rem;
+            font-weight: 350;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+            color: #1f1f1e;
+            margin-bottom: 1.4rem;
+            max-width: 80%;
+        }
+
+        .opening p {
+            color: #4b4a48;
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        .opening p:last-child {
+            margin-bottom: 0;
+        }
+
+        .opening a {
+            color: #2d5a3b;
+            text-decoration: none;
+            border-bottom: 1px solid #b6cbb9;
+            transition: border-color 0.2s;
+        }
+
+        .opening a:hover {
+            border-bottom-color: #2d5a3b;
+        }
+
+        /* 承接段落 – 额外的叙述空气 */
+        .bridge {
+            background: transparent;
+            padding: 0.6rem 0 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bridge p {
+            color: #555450;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* 特点卡片区域 — 细线、柔和边框、三栏弹性 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .feature-card {
+            flex: 1 1 200px;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 1.4rem 1.6rem;
+            border: 1px solid #e0ddd9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.15s, transform 0.1s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            color: #2c3b30;
+            margin-bottom: 0.7rem;
+            border-bottom: 1px solid #eae7e2;
+            padding-bottom: 0.4rem;
+        }
+
+        .feature-card p {
+            color: #575653;
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+
+        .feature-card a {
+            color: #2d5a3b;
+            text-decoration: none;
+            border-bottom: 1px dotted #bccfc0;
+            transition: border-bottom-color 0.15s;
+        }
+
+        .feature-card a:hover {
+            border-bottom-color: #1e3f27;
+        }
+
+        /* 温和结尾 – 带引用感 */
+        .closing {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2rem 2.2rem 2.2rem;
+            margin: 2.2rem 0;
+            border: 1px solid #e2dfda;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+        }
+
+        .closing p {
+            font-size: 1rem;
+            color: #4f4e4b;
+            margin-bottom: 1rem;
+        }
+
+        .closing p:first-of-type {
+            font-style: normal;
+            font-size: 1.1rem;
+            border-left: 3px solid #bcccc0;
+            padding-left: 1.2rem;
+            color: #303f34;
+        }
+
+        .closing a {
+            color: #2d5a3b;
+            text-decoration: none;
+            border-bottom: 1px solid #bdd0c1;
+            transition: border-bottom 0.2s;
+        }
+
+        .closing a:hover {
+            border-bottom-color: #2d5a3b;
+        }
+
+        /* 极简FAQ摘要 – 保持克制 */
+        .faq-mini {
+            background: transparent;
+            margin: 1rem 0 1.5rem;
+            padding: 0.2rem 0;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.8rem;
+            border: 1px solid #e2dfda;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #303e34;
+            font-size: 0.98rem;
+        }
+
+        .faq-item span {
+            color: #5e5d59;
+            font-size: 0.92rem;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #857f79;
+            margin-top: 2.5rem;
+            border-top: 1px solid #dbd7d1;
+            padding-top: 1.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .opening {
+                padding: 2rem 1.5rem 1.8rem;
+            }
+            .opening .sentence {
+                font-size: 1.4rem;
+                max-width: 100%;
+            }
+            .feature-grid {
+                flex-direction: column;
+            }
+            .feature-card {
+                flex: 1 1 auto;
+            }
+            .closing {
+                padding: 1.5rem 1.5rem 1.8rem;
+            }
+            .faq-item {
+                padding: 0.9rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- 开场短句 + 叙述 -->
+    <div class="opening">
+        <div class="sentence">有些名字，一开始只是符号。<br>后来却装满了故事。</div>
+        <p>我们是在去年秋天重新注意到它的。一个朋友无意间提起，说最近常看到「<a href="https://homemain-hth.com.cn">华体会</a>」这个词，起初以为是某个活动标语，后来发现它出现的场景远比想象中丰富。它不喧哗，但总在恰当的位置出现，像一段低沉的背景音，慢慢就成了日常的一部分。</p>
+        <p>于是我们开始留心。从论坛的讨论到社群的随手分享，从一次线下聚会的闲聊到工作群里的截图——它似乎从不解释自己，却始终在场。这种存在感不是靠音量赢得的，更像是一种自然而然的沉淀。</p>
+    </div>
+
+    <!-- 承接段落：从关键词背后的主题内容展开 -->
+    <div class="bridge">
+        <p>我们尝试去理解这个词背后究竟连接着什么。不是数据，不是口号，而是一连串具体而微的瞬间：有人用它完成了一次协作，有人因为它找到了一段共同话题，也有团队在它的语境里形成了默契。它的价值不在定义里，而在使用它的那些手势、语气和场景中。</p>
+        <p>这种叙述方式或许更接近它的本质——一个被反复调用、却不被过度解释的符号，留给每个人足够的空间去填充自己的理解。</p>
+    </div>
+
+    <!-- 特点列表：卡片形式 -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>不抢镜的标识</h3>
+            <p>它不试图占据视觉中心，也不依赖高对比度的存在感。更像一个安静的锚点，让你在需要时自然转向它。围绕<a href="https://homemain-hth.com.cn">华体会</a>展开的交流，多半是平实的，彼此都清楚它的分量。</p>
+        </div>
+        <div class="feature-card">
+            <h3>场景的粘合剂</h3>
+            <p>无论是对话中的引用，还是文档里的备注，它都像一层薄薄的涂层，让不同背景的人找到共同的落点。你很少听到关于它的争论，因为它本身就是一种默认的共识。</p>
+        </div>
+        <div class="feature-card">
+            <h3>有呼吸的边界</h3>
+            <p>它不是封闭的，也没有严格的规则手册。每个人可以带着自己的理解靠近它，然后在互动中不断调整、校准。这种开放性既让它保持活力，也让它始终带着一点未被完全定义的余味。</p>
+        </div>
+    </div>
+
+    <!-- 温和结尾 + 嵌入链接 -->
+    <div class="closing">
+        <p>「一个词，一旦被人认真地使用过，就再也回不到空白的状态了。」</p>
+        <p>我们后来和更多人聊过，发现每个人对<a href="https://homemain-hth.com.cn">华体会</a>的感知都有些微不同——有人觉得它像一种底色，有人形容它是空气里的湿度，还有人说它就是日常对话里那根看不见的线。这些描述都不矛盾，恰恰说明它已经融入了足够多的生活片段。</p>
+        <p>或许最好的状态就是这样：它不需要被定义，只需要被使用。当某一天你突然意识到它已经存在于许多对话缝隙里，那就是它最真实的样貌。</p>
+    </div>
+
+    <!-- FAQ 摘要 —— 简洁，不喧宾夺主 -->
+    <div class="faq-mini">
+        <div class="faq-item">
+            <strong>「华体会」来源于哪里？</strong>
+            <span>很难追溯到一个唯一的起点。它更像是在不同群体中慢慢浮现的，没有明确的创造者，也没有官方版本。你可以把它理解为一个自发生长的符号。</span>
+        </div>
+        <div class="faq-item">
+            <strong>它有什么固定的使用方式吗？</strong>
+            <span>没有固定格式。出现在对话里、备注中、标题旁，甚至作为代号都常见。关键不在于怎么用，而在于使用时双方是否自然理解。</span>
+        </div>
+        <div class="faq-item">
+            <strong>它还会继续变化吗？</strong>
+            <span>应该会。只要人们继续使用它，它的含义就会随着场景移动。这种流动性不是缺点，而是它保持生命力的方式。</span>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        —— 只是记录，不是结论 ——
+    </div>
+
+</div>
+</body>
+</html>
